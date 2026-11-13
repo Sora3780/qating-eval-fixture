@@ -33,7 +33,7 @@ const TimeSelect = styled.button`
   display: flex;
   padding: 10px 12px;
   border: 1px solid #dee2e6;
-  border-radius: 6px;
+  border-radius: 10px;
   background: #ffffff;
   font-size: 14px;
   font-weight: 500;

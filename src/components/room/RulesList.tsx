@@ -4,7 +4,7 @@ export function RulesList() {
       style={{
         display: 'flex',
         flexDirection: 'column',
-        gap: 12,
+        gap: 10,
         padding: '20px 24px',
         background: '#fff9db',
         borderRadius: 12,
