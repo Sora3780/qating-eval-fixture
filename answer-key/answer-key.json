@@ -1,0 +1,888 @@
+{
+  "generated_at": "2026-11-13T12:23:18.979Z",
+  "qating_commit": "a5fbe4b (tjfakstn/ACJB main, 2026-11-13 확인)",
+  "cases": [
+    {
+      "id": "D01",
+      "kind": "D",
+      "title": "헤더 메뉴 간격 (4개 화면 공통 컴포넌트)",
+      "frame": "HOME-01 홈",
+      "element": "Header > Nav",
+      "fact": "gap",
+      "figma": "gap 24px",
+      "code": "gap 20px",
+      "file": "src/components/layout/AppHeader.tsx",
+      "locate": "<nav className=\"flex items-center gap-5\">",
+      "token": "gap-5",
+      "method": "tailwind",
+      "note": "같은 헤더가 4개 화면에 있다 — 이슈는 1개여야 한다(중복 제거 확인)",
+      "reqa": {
+        "action": "fix",
+        "from": "gap-5",
+        "to": "gap-6",
+        "expect": "PASS"
+      },
+      "property": "spacing",
+      "element_name": "Nav",
+      "line": 5,
+      "line_text": "<nav className=\"flex items-center gap-5\">",
+      "ranks": {
+        "Header": 3,
+        "Nav": 1
+      }
+    },
+    {
+      "id": "D02",
+      "kind": "D",
+      "title": "히어로 제목 글자 크기",
+      "frame": "HOME-01 홈",
+      "element": "Hero > Title",
+      "fact": "font_size",
+      "figma": "30px",
+      "code": "36px",
+      "file": "src/components/home/HeroBanner.tsx",
+      "locate": "<h1 className=",
+      "token": "text-4xl",
+      "method": "tailwind",
+      "property": "font_size",
+      "element_name": "Title",
+      "line": 5,
+      "line_text": "<h1 className=\"text-4xl font-bold text-slate-900\">조용한 스터디룸을 가장 빠르게</h1>",
+      "ranks": {
+        "Hero": 3,
+        "Title": 1
+      }
+    },
+    {
+      "id": "D03",
+      "kind": "D",
+      "title": "히어로 CTA 버튼 좌우 여백",
+      "frame": "HOME-01 홈",
+      "element": "Hero > CTA Button",
+      "fact": "padding",
+      "figma": "padding 12px 24px",
+      "code": "padding 12px 20px",
+      "file": "src/components/home/HeroBanner.tsx",
+      "locate": "rounded-full bg-brand-600",
+      "token": "px-5 py-3",
+      "method": "tailwind",
+      "reqa": {
+        "action": "fix",
+        "from": "px-5 py-3",
+        "to": "px-6 py-3",
+        "expect": "PASS"
+      },
+      "property": "spacing",
+      "element_name": "CTA Button",
+      "line": 7,
+      "line_text": "<a href=\"#/rooms/gangnam-a\" className=\"rounded-full bg-brand-600 px-5 py-3 text-base font-semibold text-white\">스터디룸 둘러보기</a>",
+      "ranks": {
+        "Hero": 5,
+        "CTA Button": 1
+      }
+    },
+    {
+      "id": "D04",
+      "kind": "D",
+      "title": "검색창 테두리 색",
+      "frame": "HOME-01 홈",
+      "element": "Search Bar",
+      "fact": "border",
+      "figma": "테두리 #dee2e6",
+      "code": "테두리 #cad5e2",
+      "file": "src/components/home/SearchBar.tsx",
+      "locate": "<input type=\"search\"",
+      "token": "border-slate-300",
+      "method": "tailwind",
+      "note": "Tailwind 4 기본 팔레트(oklch) → sRGB 변환을 거친다",
+      "property": "color",
+      "element_name": "Search Bar",
+      "line": 5,
+      "line_text": "<input type=\"search\" placeholder=\"지역, 역 이름으로 검색\" className=\"w-full rounded-xl border border-slate-300 bg-white py-3 pr-4 pl-11 text-sm text-slate-900 placeholder:text-slate-500\" />",
+      "ranks": {
+        "Search Bar": 1
+      }
+    },
+    {
+      "id": "D05",
+      "kind": "D",
+      "title": "추천 카드 모서리 (같은 카드 3장)",
+      "frame": "HOME-01 홈",
+      "element": "Recommended Rooms > Card Row > Room Card",
+      "fact": "radius",
+      "figma": "12px",
+      "code": "8px",
+      "file": "src/components/home/RoomCard.tsx",
+      "locate": "gap-3 rounded-lg",
+      "token": "rounded-lg",
+      "method": "tailwind",
+      "note": "카드 3장이 같은 줄을 쓴다 — 이슈는 1개여야 한다",
+      "property": "radius",
+      "element_name": "Room Card",
+      "line": 5,
+      "line_text": "<a href={`#/rooms/${room.id}`} className=\"flex flex-col gap-3 rounded-lg border border-line bg-white p-4\">",
+      "ranks": {
+        "Recommended Rooms": 4,
+        "Card Row": 2,
+        "Room Card": 1
+      }
+    },
+    {
+      "id": "D06",
+      "kind": "D",
+      "title": "추천 카드 가격 굵기",
+      "frame": "HOME-01 홈",
+      "element": "Recommended Rooms > Card Row > Room Card > Price",
+      "fact": "font_weight",
+      "figma": "700",
+      "code": "500",
+      "file": "src/components/home/RoomCard.tsx",
+      "locate": "font-medium text-brand-600",
+      "token": "font-medium",
+      "method": "tailwind",
+      "property": "font_weight",
+      "element_name": "Price",
+      "line": 9,
+      "line_text": "<p className=\"text-base font-medium text-brand-600\">{room.priceLabel}</p>",
+      "ranks": {
+        "Recommended Rooms": 8,
+        "Card Row": 6,
+        "Room Card": 5,
+        "Price": 1
+      }
+    },
+    {
+      "id": "D07",
+      "kind": "D",
+      "title": "스터디룸 정보 패널 안쪽 여백",
+      "frame": "ROOM-01 스터디룸 상세",
+      "element": "Body > Left Column > Room Info",
+      "fact": "padding",
+      "figma": "padding 24px",
+      "code": "padding 20px",
+      "file": "src/components/room/RoomInfoPanel.module.css",
+      "locate": "padding: 20px;",
+      "token": "padding: 20px",
+      "method": "css-module",
+      "reqa": {
+        "action": "fix",
+        "from": "padding: 20px;",
+        "to": "padding: 24px;",
+        "expect": "PASS"
+      },
+      "property": "spacing",
+      "element_name": "Room Info",
+      "line": 6,
+      "line_text": "padding: 20px;",
+      "ranks": {
+        "Body": 3,
+        "Left Column": 2,
+        "Room Info": 1
+      }
+    },
+    {
+      "id": "D08",
+      "kind": "D",
+      "title": "예약 가능 배지 글자색",
+      "frame": "ROOM-01 스터디룸 상세",
+      "element": "Body > Left Column > Room Info > Badge > Badge Label",
+      "fact": "color",
+      "figma": "글자 #2b8a3e",
+      "code": "글자 #2f9e44",
+      "file": "src/components/room/RoomInfoPanel.module.css",
+      "locate": "color: #2f9e44;",
+      "token": "color: #2f9e44",
+      "method": "css-module",
+      "property": "color",
+      "element_name": "Badge Label",
+      "line": 16,
+      "line_text": "color: #2f9e44;",
+      "ranks": {
+        "Body": 5,
+        "Left Column": 4,
+        "Room Info": 3,
+        "Badge": 2,
+        "Badge Label": 1
+      }
+    },
+    {
+      "id": "D09",
+      "kind": "D",
+      "title": "스터디룸 제목 문구",
+      "frame": "ROOM-01 스터디룸 상세",
+      "element": "Body > Left Column > Room Info > Room Title",
+      "fact": "text",
+      "figma": "강남 A룸 (4인실)",
+      "code": "강남 A룸 (4인)",
+      "file": "src/components/room/RoomInfoPanel.tsx",
+      "locate": "강남 A룸 (4인)",
+      "token": "강남 A룸 (4인)",
+      "method": "css-module",
+      "note": "QAting 스파이크가 '문구 차이는 구조적으로 잘 못 잡는다'고 적은 유형",
+      "property": "text",
+      "element_name": "Room Title",
+      "line": 9,
+      "line_text": "<h1 className={styles.title}>강남 A룸 (4인)</h1>",
+      "ranks": {
+        "Body": 6,
+        "Left Column": 5,
+        "Room Info": 4,
+        "Room Title": 1
+      }
+    },
+    {
+      "id": "D10",
+      "kind": "D",
+      "title": "이용 규칙 항목 간격",
+      "frame": "ROOM-01 스터디룸 상세",
+      "element": "Body > Left Column > Rules",
+      "fact": "gap",
+      "figma": "gap 10px",
+      "code": "gap 12px",
+      "file": "src/components/room/RulesList.tsx",
+      "locate": "gap: 12,",
+      "token": "gap: 12",
+      "method": "inline-style",
+      "reqa": {
+        "action": "fix",
+        "from": "gap: 12,",
+        "to": "gap: 10,",
+        "expect": "PASS"
+      },
+      "property": "spacing",
+      "element_name": "Rules",
+      "line": 7,
+      "line_text": "gap: 12,",
+      "ranks": {
+        "Body": 15,
+        "Left Column": 14,
+        "Rules": 1
+      }
+    },
+    {
+      "id": "D11",
+      "kind": "D",
+      "title": "이용 규칙 두 번째 항목 문구",
+      "frame": "ROOM-01 스터디룸 상세",
+      "element": "Body > Left Column > Rules > Rule List > Rule[1]",
+      "fact": "text",
+      "figma": "퇴실 10분 전 정리",
+      "code": "퇴실 5분 전 정리",
+      "file": "src/components/room/RulesList.tsx",
+      "locate": "퇴실 5분 전 정리",
+      "token": "퇴실 5분 전 정리",
+      "method": "inline-style",
+      "property": "text",
+      "element_name": "Rule",
+      "line": 16,
+      "line_text": "<li style={{ fontSize: 14, color: '#664d03' }}>퇴실 5분 전 정리</li>",
+      "ranks": {
+        "Body": 19,
+        "Left Column": 18,
+        "Rules": 5,
+        "Rule List": 3,
+        "Rule": 1
+      }
+    },
+    {
+      "id": "D12",
+      "kind": "D",
+      "title": "시간 선택 박스 모서리",
+      "frame": "ROOM-01 스터디룸 상세",
+      "element": "Body > Booking Box > Time Select",
+      "fact": "radius",
+      "figma": "8px",
+      "code": "6px",
+      "file": "src/components/room/BookingBox.tsx",
+      "locate": "border-radius: 6px;",
+      "token": "border-radius: 6px",
+      "method": "styled-components",
+      "reqa": {
+        "action": "wrong-fix",
+        "from": "border-radius: 6px;",
+        "to": "border-radius: 10px;",
+        "expect": "FAIL",
+        "observed": "10px"
+      },
+      "property": "radius",
+      "element_name": "Time Select",
+      "line": 36,
+      "line_text": "border-radius: 6px;",
+      "ranks": {
+        "Body": 25,
+        "Booking Box": 5,
+        "Time Select": 1
+      }
+    },
+    {
+      "id": "D13",
+      "kind": "D",
+      "title": "예약하기 버튼 글자 굵기",
+      "frame": "ROOM-01 스터디룸 상세",
+      "element": "Body > Booking Box > Reserve Button > Label",
+      "fact": "font_weight",
+      "figma": "700",
+      "code": "600",
+      "file": "src/components/room/BookingBox.tsx",
+      "locate": "font-weight: 600;",
+      "token": "font-weight: 600",
+      "method": "styled-components",
+      "reqa": {
+        "action": "keep",
+        "expect": "FAIL",
+        "observed": "600"
+      },
+      "property": "font_weight",
+      "element_name": "Label",
+      "line": 51,
+      "line_text": "font-weight: 600;",
+      "ranks": {
+        "Body": 28,
+        "Booking Box": 8,
+        "Reserve Button": 2,
+        "Label": 1
+      }
+    },
+    {
+      "id": "D14",
+      "kind": "D",
+      "title": "결제 요약 항목명 글자 크기 (행 3개 공통)",
+      "frame": "BOOK-01 예약 확인",
+      "element": "Summary Card > Rows > Row > Label",
+      "fact": "font_size",
+      "figma": "14px",
+      "code": "13px",
+      "file": "src/components/booking/payment-summary.css",
+      "locate": "font-size: 13px;",
+      "token": "font-size: 13px",
+      "method": "css",
+      "property": "font_size",
+      "element_name": "Label",
+      "line": 31,
+      "line_text": "font-size: 13px;",
+      "ranks": {
+        "Summary Card": 4,
+        "Rows": 2,
+        "Row": 1,
+        "Label": 1
+      }
+    },
+    {
+      "id": "D15",
+      "kind": "D",
+      "title": "결제 금액 글자색",
+      "frame": "BOOK-01 예약 확인",
+      "element": "Summary Card > Total Row > Total Value",
+      "fact": "color",
+      "figma": "글자 #3b5bdb",
+      "code": "글자 #4c6ef5",
+      "file": "src/components/booking/payment-summary.css",
+      "locate": "color: #4c6ef5;",
+      "token": "color: #4c6ef5",
+      "method": "css",
+      "property": "color",
+      "element_name": "Total Value",
+      "line": 59,
+      "line_text": "color: #4c6ef5;",
+      "ranks": {
+        "Summary Card": 12,
+        "Total Row": 3,
+        "Total Value": 1
+      }
+    },
+    {
+      "id": "D16",
+      "kind": "D",
+      "title": "이전 버튼 문구",
+      "frame": "BOOK-01 예약 확인",
+      "element": "Confirm Actions > Cancel Button > Label",
+      "fact": "text",
+      "figma": "이전 단계",
+      "code": "이전으로",
+      "file": "src/components/booking/ConfirmActions.tsx",
+      "locate": ">이전으로</a>",
+      "token": "이전으로",
+      "method": "tailwind",
+      "property": "text",
+      "element_name": "Label",
+      "line": 4,
+      "line_text": "<a href=\"#/rooms/gangnam-a\" className=\"inline-flex h-10 items-center rounded-lg border border-line bg-white px-5 text-sm font-semibold text-slate-700\">이전으로</a>",
+      "ranks": {
+        "Confirm Actions": 3,
+        "Cancel Button": 2,
+        "Label": 1
+      }
+    },
+    {
+      "id": "D17",
+      "kind": "D",
+      "title": "예약 내역 항목 좌우 여백 (항목 8개 공통)",
+      "frame": "MY-01 내 예약",
+      "element": "Body > Booking List > Booking Item",
+      "fact": "padding",
+      "figma": "padding 16px 20px",
+      "code": "padding 16px",
+      "file": "src/components/mypage/BookingList.tsx",
+      "locate": "gap-4 rounded-xl",
+      "token": "p-4",
+      "method": "tailwind",
+      "property": "spacing",
+      "element_name": "Booking Item",
+      "line": 8,
+      "line_text": "<article key={booking.id} className=\"flex items-center gap-4 rounded-xl border border-line bg-white p-4\">",
+      "ranks": {
+        "Body": 10,
+        "Booking List": 3,
+        "Booking Item": 1
+      }
+    },
+    {
+      "id": "P01",
+      "kind": "P",
+      "title": "블록 안 41번째 이후 요소 (요소 40개 상한)",
+      "frame": "MY-01 내 예약",
+      "element": "Body > Booking List > More Link",
+      "fact": "color",
+      "figma": "글자 #3b5bdb",
+      "code": "글자 #62748e",
+      "file": "src/components/mypage/BookingList.tsx",
+      "locate": "self-center",
+      "token": "text-slate-500",
+      "method": "tailwind",
+      "expect_detected": false,
+      "note": "QAting은 매핑된 노드마다 위에서부터 요소 40개만 비교한다(FigmaFacts.MAX_ELEMENTS). README에는 없는 제한 — 긴 목록 아래 요소는 검사되지 않는다",
+      "property": "color",
+      "element_name": "More Link",
+      "line": 14,
+      "line_text": "<a href=\"#/me/bookings\" className=\"self-center text-sm font-semibold text-slate-500\">지난 예약 더 보기</a>",
+      "ranks": {
+        "Body": null,
+        "Booking List": null,
+        "More Link": 1
+      }
+    },
+    {
+      "id": "P02",
+      "kind": "P",
+      "title": "경로 별칭(@/)으로 import한 스타일시트",
+      "frame": "MY-01 내 예약",
+      "element": "Body > Profile Card > Avatar",
+      "fact": "radius",
+      "figma": "full",
+      "code": "12px",
+      "file": "src/styles/profile-card.module.css",
+      "locate": "border-radius: 12px;",
+      "token": "border-radius: 12px",
+      "method": "css-module",
+      "expect_detected": false,
+      "note": "QAting은 ./ ../ 상대 경로 import만 따라간다. tsconfig/vite 별칭(@/)으로 가져온 CSS는 비교 근거에 들어가지 않는다. README에는 없는 제한",
+      "property": "radius",
+      "element_name": "Avatar",
+      "line": 15,
+      "line_text": "border-radius: 12px;",
+      "ranks": {
+        "Body": 3,
+        "Profile Card": 2,
+        "Avatar": 1
+      }
+    },
+    {
+      "id": "N01",
+      "kind": "N",
+      "title": "rounded-full ↔ 반지름 999",
+      "frame": "HOME-01 홈",
+      "element": "Hero > CTA Button",
+      "fact": "radius",
+      "figma": "full",
+      "file": "src/components/home/HeroBanner.tsx",
+      "locate": "rounded-full bg-brand-600",
+      "token": "rounded-full",
+      "method": "tailwind",
+      "property": "radius",
+      "element_name": "CTA Button",
+      "line": 7,
+      "line_text": "<a href=\"#/rooms/gangnam-a\" className=\"rounded-full bg-brand-600 px-5 py-3 text-base font-semibold text-white\">스터디룸 둘러보기</a>",
+      "ranks": {
+        "Hero": 5,
+        "CTA Button": 1
+      }
+    },
+    {
+      "id": "N02",
+      "kind": "N",
+      "title": "저장소 @theme 사용자 색 (bg-brand-50)",
+      "frame": "HOME-01 홈",
+      "element": "Hero",
+      "fact": "background",
+      "figma": "배경 #edf2ff",
+      "file": "src/components/home/HeroBanner.tsx",
+      "locate": "<section className=",
+      "token": "bg-brand-50",
+      "method": "tailwind",
+      "property": "color",
+      "element_name": "Hero",
+      "line": 3,
+      "line_text": "<section className=\"flex flex-col items-start gap-4 rounded-2xl bg-brand-50 px-10 py-12\">",
+      "ranks": {
+        "Hero": 1
+      }
+    },
+    {
+      "id": "N03",
+      "kind": "N",
+      "title": "Tailwind 기본 팔레트 oklch (text-slate-500)",
+      "frame": "HOME-01 홈",
+      "element": "Hero > Subtitle",
+      "fact": "color",
+      "figma": "글자 #62748e",
+      "file": "src/components/home/HeroBanner.tsx",
+      "locate": "text-base text-slate-500",
+      "token": "text-slate-500",
+      "method": "tailwind",
+      "property": "color",
+      "element_name": "Subtitle",
+      "line": 6,
+      "line_text": "<p className=\"text-base text-slate-500\">역 근처 120개 공간을 시간 단위로 예약하세요</p>",
+      "ranks": {
+        "Hero": 4,
+        "Subtitle": 1
+      }
+    },
+    {
+      "id": "N04",
+      "kind": "N",
+      "title": "absolute 아이콘 + pl-11 ↔ padding 16 + 아이콘 20 + gap 8",
+      "frame": "HOME-01 홈",
+      "element": "Search Bar",
+      "fact": "padding",
+      "figma": "padding 12px 16px",
+      "file": "src/components/home/SearchBar.tsx",
+      "locate": "<input type=\"search\"",
+      "token": "py-3 pr-4 pl-11",
+      "method": "tailwind",
+      "property": "spacing",
+      "element_name": "Search Bar",
+      "line": 5,
+      "line_text": "<input type=\"search\" placeholder=\"지역, 역 이름으로 검색\" className=\"w-full rounded-xl border border-slate-300 bg-white py-3 pr-4 pl-11 text-sm text-slate-900 placeholder:text-slate-500\" />",
+      "ranks": {
+        "Search Bar": 1
+      }
+    },
+    {
+      "id": "N05",
+      "kind": "N",
+      "title": "CSS 변수 var(--color-line)",
+      "frame": "ROOM-01 스터디룸 상세",
+      "element": "Body > Left Column > Room Info",
+      "fact": "border",
+      "figma": "테두리 #dee2e6",
+      "file": "src/components/room/RoomInfoPanel.module.css",
+      "locate": "var(--color-line)",
+      "token": "border: 1px solid var(--color-line)",
+      "method": "css-module",
+      "property": "color",
+      "element_name": "Room Info",
+      "line": 8,
+      "line_text": "border: 1px solid var(--color-line);",
+      "ranks": {
+        "Body": 3,
+        "Left Column": 2,
+        "Room Info": 1
+      }
+    },
+    {
+      "id": "N06",
+      "kind": "N",
+      "title": "대문자 hex (#F1F5F9)",
+      "frame": "ROOM-01 스터디룸 상세",
+      "element": "Body > Left Column > Room Info > Amenities > Chip",
+      "fact": "background",
+      "figma": "배경 #f1f5f9",
+      "file": "src/components/room/RoomInfoPanel.module.css",
+      "locate": "background: #F1F5F9;",
+      "token": "background: #F1F5F9",
+      "method": "css-module",
+      "property": "color",
+      "element_name": "Chip",
+      "line": 45,
+      "line_text": "background: #F1F5F9;",
+      "ranks": {
+        "Body": 9,
+        "Left Column": 8,
+        "Room Info": 7,
+        "Amenities": 2,
+        "Chip": 1
+      }
+    },
+    {
+      "id": "N07",
+      "kind": "N",
+      "title": "rem 단위 (0.8125rem = 13px)",
+      "frame": "ROOM-01 스터디룸 상세",
+      "element": "Body > Left Column > Room Info > Amenities > Chip > Chip Label",
+      "fact": "font_size",
+      "figma": "13px",
+      "file": "src/components/room/RoomInfoPanel.module.css",
+      "locate": "font-size: 0.8125rem;",
+      "token": "font-size: 0.8125rem",
+      "method": "css-module",
+      "property": "font_size",
+      "element_name": "Chip Label",
+      "line": 46,
+      "line_text": "font-size: 0.8125rem;",
+      "ranks": {
+        "Body": 10,
+        "Left Column": 9,
+        "Room Info": 8,
+        "Amenities": 3,
+        "Chip": 2,
+        "Chip Label": 1
+      }
+    },
+    {
+      "id": "N08",
+      "kind": "N",
+      "title": "인라인 style 단위 없는 숫자 (borderRadius: 12)",
+      "frame": "ROOM-01 스터디룸 상세",
+      "element": "Body > Left Column > Rules",
+      "fact": "radius",
+      "figma": "12px",
+      "file": "src/components/room/RulesList.tsx",
+      "locate": "borderRadius: 12,",
+      "token": "borderRadius: 12",
+      "method": "inline-style",
+      "property": "radius",
+      "element_name": "Rules",
+      "line": 10,
+      "line_text": "borderRadius: 12,",
+      "ranks": {
+        "Body": 15,
+        "Left Column": 14,
+        "Rules": 1
+      }
+    },
+    {
+      "id": "N09",
+      "kind": "N",
+      "title": "rgb() 배경 · font-weight: bold · 1.25rem",
+      "frame": "BOOK-01 예약 확인",
+      "element": "Summary Card",
+      "fact": "background",
+      "figma": "배경 #ffffff",
+      "file": "src/components/booking/payment-summary.css",
+      "locate": "background: rgb(255, 255, 255);",
+      "token": "background: rgb(255, 255, 255)",
+      "method": "css",
+      "note": "같은 파일의 .summary__title(bold·1.25rem)도 같은 성격",
+      "property": "color",
+      "element_name": "Summary Card",
+      "line": 6,
+      "line_text": "background: rgb(255, 255, 255);",
+      "ranks": {
+        "Summary Card": 1
+      }
+    },
+    {
+      "id": "N10",
+      "kind": "N",
+      "title": "고정 높이(h-10) 버튼의 세로 여백",
+      "frame": "BOOK-01 예약 확인",
+      "element": "Confirm Actions > Cancel Button",
+      "fact": "padding",
+      "figma": "padding 10px 20px",
+      "file": "src/components/booking/ConfirmActions.tsx",
+      "locate": ">이전으로</a>",
+      "token": "h-10",
+      "method": "tailwind",
+      "note": "QAting v2 규칙: 고정 높이가 있고 세로 padding 클래스가 없으면 세로 padding은 비교하지 않는다",
+      "property": "spacing",
+      "element_name": "Cancel Button",
+      "line": 4,
+      "line_text": "<a href=\"#/rooms/gangnam-a\" className=\"inline-flex h-10 items-center rounded-lg border border-line bg-white px-5 text-sm font-semibold text-slate-700\">이전으로</a>",
+      "ranks": {
+        "Confirm Actions": 2,
+        "Cancel Button": 1
+      }
+    },
+    {
+      "id": "S01",
+      "kind": "S",
+      "title": "styled-components 보간 ${muted}",
+      "frame": "ROOM-01 스터디룸 상세",
+      "element": "Body > Booking Box > Price Row > Unit",
+      "fact": "color",
+      "figma": "글자 #62748e",
+      "file": "src/components/room/BookingBox.tsx",
+      "locate": "color: ${muted};",
+      "token": "color: ${muted}",
+      "method": "styled-components",
+      "note": "실제 값(#868e96)은 시안과 다르지만 README상 보간 값은 비교하지 않는다",
+      "property": "color",
+      "element_name": "Unit",
+      "line": 29,
+      "line_text": "color: ${muted};",
+      "ranks": {
+        "Body": 24,
+        "Booking Box": 4,
+        "Price Row": 3,
+        "Unit": 1
+      }
+    },
+    {
+      "id": "S02",
+      "kind": "S",
+      "title": "styled-components :hover 배경",
+      "frame": "ROOM-01 스터디룸 상세",
+      "element": "Body > Booking Box > Reserve Button",
+      "fact": "background",
+      "figma": "배경 #3b5bdb",
+      "file": "src/components/room/BookingBox.tsx",
+      "locate": "background: #364fc7;",
+      "token": "background: #364fc7",
+      "method": "styled-components",
+      "note": "기본 배경은 시안과 같다. hover 줄을 근거로 잡으면 오탐",
+      "property": "color",
+      "element_name": "Reserve Button",
+      "line": 55,
+      "line_text": "background: #364fc7;",
+      "ranks": {
+        "Body": 27,
+        "Booking Box": 7,
+        "Reserve Button": 1
+      }
+    },
+    {
+      "id": "S03",
+      "kind": "S",
+      "title": "데이터 객체의 문구 (예시 일정)",
+      "frame": "BOOK-01 예약 확인",
+      "element": "Summary Card > Rows > Row[1] > Value",
+      "fact": "text",
+      "figma": "11월 20일 (목) 14:00 – 16:00",
+      "file": "src/components/booking/PaymentSummary.tsx",
+      "locate": "schedule: '11월 21일 (금) 14:00 – 16:00',",
+      "token": "11월 21일 (금) 14:00 – 16:00",
+      "method": "data",
+      "note": "README: 데이터로 그리는 문구는 비교하지 않는다. 시안의 예시 데이터와 달라도 이슈가 아니어야 한다",
+      "property": "text",
+      "element_name": "Value",
+      "line": 5,
+      "line_text": "schedule: '11월 21일 (금) 14:00 – 16:00',",
+      "ranks": {
+        "Summary Card": 7,
+        "Rows": 5,
+        "Row": 2,
+        "Value": 1
+      }
+    },
+    {
+      "id": "S04",
+      "kind": "S",
+      "title": "투명도 있는 글자색 rgba(…, 0.9)",
+      "frame": "BOOK-01 예약 확인",
+      "element": "Summary Card > Rows > Row > Value",
+      "fact": "color",
+      "figma": "글자 #0f172b",
+      "file": "src/components/booking/payment-summary.css",
+      "locate": "rgba(15, 23, 43, 0.9)",
+      "token": "color: rgba(15, 23, 43, 0.9)",
+      "method": "css",
+      "property": "color",
+      "element_name": "Value",
+      "line": 39,
+      "line_text": "color: rgba(15, 23, 43, 0.9);",
+      "ranks": {
+        "Summary Card": 5,
+        "Rows": 3,
+        "Row": 2,
+        "Value": 1
+      }
+    },
+    {
+      "id": "S05",
+      "kind": "S",
+      "title": "placeholder: 변형으로만 정한 색",
+      "frame": "HOME-01 홈",
+      "element": "Search Bar > Placeholder",
+      "fact": "color",
+      "figma": "글자 #62748e",
+      "file": "src/components/home/SearchBar.tsx",
+      "locate": "<input type=\"search\"",
+      "token": "placeholder:text-slate-500",
+      "method": "tailwind",
+      "note": "같은 줄의 text-slate-900(입력 글자색)을 placeholder 색으로 잡으면 오탐",
+      "property": "color",
+      "element_name": "Placeholder",
+      "line": 5,
+      "line_text": "<input type=\"search\" placeholder=\"지역, 역 이름으로 검색\" className=\"w-full rounded-xl border border-slate-300 bg-white py-3 pr-4 pl-11 text-sm text-slate-900 placeholder:text-slate-500\" />",
+      "ranks": {
+        "Search Bar": 3,
+        "Placeholder": 1
+      }
+    }
+  ],
+  "mapping": {
+    "frames": {
+      "HOME-01 홈": "src/pages/HomePage.tsx",
+      "ROOM-01 스터디룸 상세": "src/pages/RoomDetailPage.tsx",
+      "BOOK-01 예약 확인": "src/pages/BookingConfirmPage.tsx",
+      "MY-01 내 예약": "src/pages/MyBookingsPage.tsx",
+      "SET-01 알림 설정": null,
+      "Spec / Color Tokens": null
+    },
+    "nodes": {
+      "Header": [
+        "src/components/layout/AppHeader.tsx"
+      ],
+      "Nav": [
+        "src/components/layout/AppHeader.tsx"
+      ],
+      "Hero": [
+        "src/components/home/HeroBanner.tsx"
+      ],
+      "Search Bar": [
+        "src/components/home/SearchBar.tsx"
+      ],
+      "Recommended Rooms": [
+        "src/components/home/RecommendedRooms.tsx"
+      ],
+      "Card Row": [
+        "src/components/home/RecommendedRooms.tsx"
+      ],
+      "Room Card": [
+        "src/components/home/RoomCard.tsx"
+      ],
+      "Body": [
+        "src/pages/RoomDetailPage.tsx",
+        "src/pages/MyBookingsPage.tsx"
+      ],
+      "Left Column": [
+        "src/pages/RoomDetailPage.tsx"
+      ],
+      "Room Info": [
+        "src/components/room/RoomInfoPanel.tsx"
+      ],
+      "Rules": [
+        "src/components/room/RulesList.tsx"
+      ],
+      "Booking Box": [
+        "src/components/room/BookingBox.tsx"
+      ],
+      "Summary Card": [
+        "src/components/booking/PaymentSummary.tsx"
+      ],
+      "Confirm Actions": [
+        "src/components/booking/ConfirmActions.tsx"
+      ],
+      "Profile Card": [
+        "src/components/mypage/ProfileCard.tsx"
+      ],
+      "Booking List": [
+        "src/components/mypage/BookingList.tsx"
+      ],
+      "Booking Item": [
+        "src/components/mypage/BookingList.tsx"
+      ]
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "name": "qating-eval-fixture",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview",
+    "spec": "node scripts/build-spec.mjs",
+    "key": "node scripts/build-answer-key.mjs",
+    "score": "node scripts/score.mjs",
+    "check-figma": "node scripts/check-figma.mjs",
+    "reqa:apply": "node scripts/apply-reqa-fixes.mjs",
+    "reqa:revert": "node scripts/apply-reqa-fixes.mjs --revert"
+  },
+  "dependencies": {
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "styled-components": "^6.6.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.3.3",
+    "@types/node": "^24.13.3",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.7",
+    "@vitejs/plugin-react": "^6.1.1",
+    "tailwindcss": "^4.3.3",
+    "typescript": "~6.0.2",
+    "vite": "^8.3.0"
+  }
+}

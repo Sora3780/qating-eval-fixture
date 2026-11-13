@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-50: #edf2ff;
+  --color-brand-600: #3b5bdb;
+  --color-brand-700: #364fc7;
+  --color-line: #dee2e6;
+}
+
+body {
+  margin: 0;
+  font-family: "Pretendard", "Noto Sans KR", system-ui, sans-serif;
+  background: #f8fafc;
+}
