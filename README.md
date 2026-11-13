@@ -12,6 +12,8 @@ QAting 팀이 제공한 샘플은 QAting 자기 저장소라서, 이슈가 몇 �
 | 정답표 | `answer-key/ANSWER_KEY.md` | 차이·함정마다 시안 값, 구현 값, 코드 위치(파일:줄)를 QAting 이슈와 같은 표기로 적었습니다 |
 | 채점 | `scripts/score.mjs` | QAting에서 받은 JSON → 재현율·정밀도·오탐·중복·매핑 정확도·Re-QA 판정 |
 | 평가 진행표 | `docs/EVALUATION.md` | 시나리오별 기대 결과와 기록 칸 |
+| QAting 코드 하네스 | `harness/` | QAting 백엔드 실제 코드에 이 프로젝트를 넣는 JUnit 테스트(LLM 없이) |
+| 테스트 보고 | `docs/TEST_REPORT.md` | 1차 결과와 발견 사항 |
 
 > 정답표는 QAting 내부 규칙(`FigmaFacts`·`StyleRules`·`TailwindValues`·`CssValues`, ACJB `main` a5fbe4b)을 읽고 만들었습니다. 시안 값 문자열은 QAting이 이슈에 적는 형식과 같아서(`padding 12px 24px`, `글자 #3b5bdb` 등) 그대로 맞춰 볼 수 있습니다.
 
